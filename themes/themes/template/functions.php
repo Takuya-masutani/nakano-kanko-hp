@@ -17,6 +17,7 @@ register_nav_menus( array( 'main-menu' => esc_html__( 'Main Menu', 'blankslate' 
 add_action( 'wp_enqueue_scripts', 'blankslate_enqueue' );
 function blankslate_enqueue() {
 wp_enqueue_style( 'blankslate-style', get_stylesheet_uri() );
+wp_enqueue_style( 'custom-style', get_template_directory_uri() . '/customcss.css', array('blankslate-style'), null );
 wp_enqueue_script( 'jquery' );
 }
 add_action( 'wp_footer', 'blankslate_footer' );

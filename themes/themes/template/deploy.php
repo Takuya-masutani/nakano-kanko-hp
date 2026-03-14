@@ -56,6 +56,7 @@ $files = [
     'single-tourism.php',
     'single.php',
     'style.css',
+    'customcss.css',
     'tag.php',
     'tax-list-area-eatery.php',
     'tax-list-area-facility.php',

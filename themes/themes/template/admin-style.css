@@ -1,0 +1,5 @@
+.acf-checkbox-list.acf-bl {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}

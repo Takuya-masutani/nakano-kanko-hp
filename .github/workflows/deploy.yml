@@ -1,0 +1,14 @@
+name: Deploy to Xserver
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: デプロイフックを呼び出す
+        run: |
+          curl -f "https://www.nakano-kanko.com/wp-content/themes/template/deploy.php?token=kanko_deploy_2026"

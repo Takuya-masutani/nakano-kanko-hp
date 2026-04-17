@@ -3152,9 +3152,7 @@ Event Slider FINAL STYLE
 }
 .event-info-swiper article > div figure {
 		width: clamp(250px, 38vw, 520px);
-		height: clamp(250px, 38vw, 520px);
 		padding: 0;
-		position: relative;
 		z-index: 1;
 		flex-shrink: 0;
 		overflow: hidden;
@@ -3164,14 +3162,13 @@ Event Slider FINAL STYLE
 		padding-bottom: 2rem;
 }
 .event-info-swiper article > div figure img {
-		position: absolute !important;
-		top: 0 !important;
-		left: 0 !important;
-		width: 100% !important;
-		height: 100% !important;
+		display: block !important;
+		width: clamp(250px, 38vw, 520px) !important;
+		height: clamp(250px, 38vw, 520px) !important;
 		object-fit: cover !important;
 		object-position: center top !important;
 		max-height: none !important;
+		max-width: none !important;
 		margin: 0 !important;
 }
 .event-info-swiper .more {

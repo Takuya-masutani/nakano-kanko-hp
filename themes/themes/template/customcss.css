@@ -3217,6 +3217,12 @@ Event Slider FINAL STYLE
 		.event-info-swiper article > div {
 				flex-direction: column;
 		}
+		.event-info-swiper .event-overview {
+				display: -webkit-box;
+				-webkit-line-clamp: 3;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
+		}
 		.event-info-swiper article > div .post-info {
 				width: 100%;
 		}

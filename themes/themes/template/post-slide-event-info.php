@@ -119,7 +119,7 @@ if ( ! $event_query->have_posts() ) {
               return;
             }
 
-            $limit = 50;
+            $limit = 300;
 
             if ( mb_strlen( $plain ) > $limit ) {
               $plain = mb_substr( $plain, 0, $limit )

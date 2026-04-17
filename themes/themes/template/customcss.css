@@ -3102,7 +3102,7 @@ Event Slider FINAL STYLE
 /* スライダー -------*/
 .event-info-swiper {
 		background-color: rgba(255, 255, 255, 0.95);
-		padding: 5rem 0 8rem 0;
+		padding: 1em 0;
 		position: relative;
 }
 .only_sp .event-info-swiper {
@@ -3140,7 +3140,7 @@ Event Slider FINAL STYLE
 }
 .event-info-swiper article > div {
 		display: flex;
-		gap: 5rem;
+		gap: 1em;
 }
 .event-info-swiper article > div .event-name {
 		font-size: 1.7rem;

@@ -3151,28 +3151,24 @@ Event Slider FINAL STYLE
 		margin: 0;
 }
 .event-info-swiper article > div figure {
-		width: clamp(280px, 35vw, 500px);
-		background: rgba(255,255,255,0.8);
-		text-align: center;
+		width: clamp(250px, 30vw, 400px);
+		aspect-ratio: 1 / 1;
+		height: auto;
 		padding: 0;
 		position: relative;
 		z-index: 1;
-		height: 380px;
 		flex-shrink: 0;
-		display: flex;
-		align-items: center;
-		justify-content: center;
 		overflow: hidden;
 }
 .event-info-swiper article > div .post-info {
-		width: calc(100% - clamp(280px, 35vw, 500px) - 5rem);
+		width: calc(100% - clamp(250px, 30vw, 400px) - 5rem);
 		padding-bottom: 2rem;
 }
 .event-info-swiper article > div figure img {
 		width: 100%;
 		height: 100%;
-		margin: 0 auto;
-		object-fit: contain;
+		object-fit: cover;
+		object-position: center top;
 		max-height: none;
 }
 .event-info-swiper .more {
@@ -3217,11 +3213,13 @@ Event Slider FINAL STYLE
 		}
 		.event-info-swiper article > div figure {
 				width: 100%;
-				height: 260px;
+				aspect-ratio: 4 / 3;
+				height: auto;
 				flex-shrink: unset;
 		}
 		.event-info-swiper article > div figure img {
 				object-fit: cover;
+				object-position: center top;
 		}
 		.event-info-swiper article {
 				max-width: 90%;

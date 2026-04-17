@@ -3151,23 +3151,29 @@ Event Slider FINAL STYLE
 		margin: 0;
 }
 .event-info-swiper article > div figure {
-		width: clamp(250px, 20vw, 500px);
+		width: clamp(280px, 35vw, 500px);
 		background: rgba(255,255,255,0.8);
 		text-align: center;
-		padding: 1rem;
+		padding: 0;
 		position: relative;
 		z-index: 1;
-		height: 100%;
+		height: 380px;
+		flex-shrink: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
 }
 .event-info-swiper article > div .post-info {
-		width: calc(100% - clamp(250px, 20vw, 500px) - 5rem);
+		width: calc(100% - clamp(280px, 35vw, 500px) - 5rem);
 		padding-bottom: 2rem;
 }
 .event-info-swiper article > div figure img {
 		width: 100%;
+		height: 100%;
 		margin: 0 auto;
 		object-fit: contain;
-		max-height: 310px;
+		max-height: none;
 }
 .event-info-swiper .more {
 		position: unset;
@@ -3211,6 +3217,11 @@ Event Slider FINAL STYLE
 		}
 		.event-info-swiper article > div figure {
 				width: 100%;
+				height: 260px;
+				flex-shrink: unset;
+		}
+		.event-info-swiper article > div figure img {
+				object-fit: cover;
 		}
 		.event-info-swiper article {
 				max-width: 90%;

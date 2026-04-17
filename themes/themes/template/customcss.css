@@ -3102,7 +3102,7 @@ Event Slider FINAL STYLE
 /* スライダー -------*/
 .event-info-swiper {
 		background-color: rgba(255, 255, 255, 0.95);
-		padding: 1em 0;
+		padding: 3rem 0;
 		position: relative;
 }
 .only_sp .event-info-swiper {
@@ -3114,7 +3114,7 @@ Event Slider FINAL STYLE
 		background-color: rgba(255, 255, 255, 0);
 }
 .event-info-swiper article {
-		max-width: 80%;
+		max-width: 90%;
 		margin: 0 auto;
 }
 .swiper.event-info-swiper .post-info h3.post-title {
@@ -3151,7 +3151,7 @@ Event Slider FINAL STYLE
 		margin: 0;
 }
 .event-info-swiper article > div figure {
-		width: clamp(250px, 38vw, 520px);
+		width: clamp(250px, 30vw, 500px);
 		position: relative;
 		overflow: hidden;
 		flex-shrink: 0;
@@ -3165,7 +3165,7 @@ Event Slider FINAL STYLE
 		padding-top: 100%;
 }
 .event-info-swiper article > div .post-info {
-		width: calc(100% - clamp(250px, 38vw, 520px) - 5rem);
+		width: calc(100% - clamp(250px, 30vw, 500px) - 5rem);
 		padding-bottom: 2rem;
 }
 .event-info-swiper article > div figure img {

@@ -3101,8 +3101,8 @@ Event Slider FINAL STYLE
 .cultures-category-list .learning{background-color:#eeeeee;border-radius:2em; padding:0 0.8em;}
 /* スライダー -------*/
 .event-info-swiper {
-		background-color: rgba(255, 255, 255, 0.95);
-		padding: 3rem 0;
+		background-color: rgba(255, 255, 255, 0.95) !important;
+		padding: 3rem 0 !important;
 		position: relative;
 }
 .only_sp .event-info-swiper {
@@ -3114,7 +3114,7 @@ Event Slider FINAL STYLE
 		background-color: rgba(255, 255, 255, 0);
 }
 .event-info-swiper article {
-		max-width: 90%;
+		max-width: 90% !important;
 		margin: 0 auto;
 }
 .swiper.event-info-swiper .post-info h3.post-title {

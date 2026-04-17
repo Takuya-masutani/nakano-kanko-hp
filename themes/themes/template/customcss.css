@@ -3102,8 +3102,10 @@ Event Slider FINAL STYLE
 /* スライダー -------*/
 .event-info-swiper {
 		background-color: rgba(255, 255, 255, 0.95);
-		padding: 1em 0;
+		padding: 0;
 		position: relative;
+		height: calc(clamp(650px, 90vh, 750px) * 0.7);
+		overflow: hidden;
 }
 .only_sp .event-info-swiper {
 		background-color: rgba(255, 255, 255, 0);
@@ -3114,8 +3116,11 @@ Event Slider FINAL STYLE
 		background-color: rgba(255, 255, 255, 0);
 }
 .event-info-swiper article {
-		max-width: 80%;
-		margin: 0 auto;
+		max-width: 100%;
+		margin: 0;
+		padding: 2rem;
+		height: 100%;
+		box-sizing: border-box;
 }
 .swiper.event-info-swiper .post-info h3.post-title {
 		font-size: 2.6rem !important;
@@ -3140,7 +3145,8 @@ Event Slider FINAL STYLE
 }
 .event-info-swiper article > div {
 		display: flex;
-		gap: 1em;
+		gap: 2rem;
+		height: 100%;
 }
 .event-info-swiper article > div .event-name {
 		font-size: 1.7rem;
@@ -3151,22 +3157,17 @@ Event Slider FINAL STYLE
 		margin: 0;
 }
 .event-info-swiper article > div figure {
-		width: clamp(250px, 38vw, 520px);
+		flex: 1;
+		min-width: 0;
 		position: relative;
 		overflow: hidden;
-		flex-shrink: 0;
-		align-self: flex-start;
 		padding: 0;
 		z-index: 1;
 }
-.event-info-swiper article > div figure::before {
-		content: '';
-		display: block;
-		padding-top: 100%;
-}
 .event-info-swiper article > div .post-info {
-		width: calc(100% - clamp(250px, 38vw, 520px) - 5rem);
-		padding-bottom: 2rem;
+		flex: 1;
+		min-width: 0;
+		padding-bottom: 0;
 }
 .event-info-swiper article > div figure img {
 		position: absolute !important;
@@ -3221,19 +3222,25 @@ Event Slider FINAL STYLE
 				width: 100%;
 		}
 		.event-info-swiper article > div figure {
+				flex: none;
 				width: 100%;
-				align-self: auto;
-				flex-shrink: unset;
 		}
 		.event-info-swiper article > div figure::before {
+				content: '';
+				display: block;
 				padding-top: 75%;
 		}
 		.event-info-swiper article {
-				max-width: 90%;
-				margin: 0 auto;
+				padding: 1rem;
+				height: auto;
+		}
+		.event-info-swiper article > div {
+				height: auto;
 		}
 		.event-info-swiper {
-				padding: 0 0 5rem;
+				height: auto;
+				padding: 0 0 3rem;
+				overflow: visible;
 		}
 }
 @media screen and (max-width: 480px) {

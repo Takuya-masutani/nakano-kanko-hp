@@ -3218,10 +3218,10 @@ Event Slider FINAL STYLE
 				flex-direction: column;
 		}
 		.event-info-swiper .event-overview {
-				display: -webkit-box;
-				-webkit-line-clamp: 3;
-				-webkit-box-orient: vertical;
-				overflow: hidden;
+				display: -webkit-box !important;
+				-webkit-line-clamp: 3 !important;
+				-webkit-box-orient: vertical !important;
+				overflow: hidden !important;
 		}
 		.event-info-swiper article > div .post-info {
 				width: 100%;

@@ -122,13 +122,13 @@ if ( ! $event_query->have_posts() ) {
             $limit = 300;
 
             if ( mb_strlen( $plain ) > $limit ) {
-              $plain = mb_substr( $plain, 0, $limit )
-                . '…<a href="' . esc_url( get_permalink() ) . '" class="more">イベントの詳細へ</a>';
+              $plain = mb_substr( $plain, 0, $limit ) . '…';
             }
             ?>
             <p class="event-overview">
               <?php echo wp_kses_post( $plain ); ?>
             </p>
+            <a href="<?php echo esc_url( get_permalink() ); ?>" class="more">イベントの詳細へ</a>
             <?php endif; ?>
 
           </div>

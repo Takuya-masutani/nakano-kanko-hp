@@ -3130,7 +3130,8 @@ Event Slider FINAL STYLE
 		margin: 0;
 		display: block;
 		width: 100%;
-		background-color: #0072bc;
+		background: repeating-linear-gradient(45deg, #641e05, #641e05 10px, #6d2106 10px, #6d2106 20px);
+		border-radius: 0.5rem;
 		text-align: center;
 		color: #fff;
 		position: absolute;

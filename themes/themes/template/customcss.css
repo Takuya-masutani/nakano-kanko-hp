@@ -3151,9 +3151,8 @@ Event Slider FINAL STYLE
 		margin: 0;
 }
 .event-info-swiper article > div figure {
-		width: clamp(250px, 30vw, 400px);
-		aspect-ratio: 1 / 1;
-		height: auto;
+		width: clamp(250px, 38vw, 520px);
+		height: clamp(250px, 38vw, 520px);
 		padding: 0;
 		position: relative;
 		z-index: 1;
@@ -3161,18 +3160,19 @@ Event Slider FINAL STYLE
 		overflow: hidden;
 }
 .event-info-swiper article > div .post-info {
-		width: calc(100% - clamp(250px, 30vw, 400px) - 5rem);
+		width: calc(100% - clamp(250px, 38vw, 520px) - 5rem);
 		padding-bottom: 2rem;
 }
 .event-info-swiper article > div figure img {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		object-position: center top;
-		max-height: none;
+		position: absolute !important;
+		top: 0 !important;
+		left: 0 !important;
+		width: 100% !important;
+		height: 100% !important;
+		object-fit: cover !important;
+		object-position: center top !important;
+		max-height: none !important;
+		margin: 0 !important;
 }
 .event-info-swiper .more {
 		position: unset;

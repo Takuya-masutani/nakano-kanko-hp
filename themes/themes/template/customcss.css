@@ -3219,7 +3219,7 @@ Event Slider FINAL STYLE
 		.event-info-swiper article > div {
 				flex-direction: column;
 		}
-		p.event-overview {
+		.event-info-swiper p.event-overview {
 				line-height: 1.7em !important;
 				max-height: 5.1em !important;
 				overflow: hidden !important;

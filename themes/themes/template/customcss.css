@@ -169,6 +169,11 @@ main {
 .entry-content{
 		padding: 3rem 0;
 }
+@media screen and (max-width: 768px) {
+	.entry-content {
+		padding-top: 0;
+	}
+}
 /* main-visual --------------------------------*/
 .fadeIn_Mv {
 		animation-name: fadeIn;

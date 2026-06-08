@@ -3107,7 +3107,7 @@ Event Slider FINAL STYLE
 /* スライダー -------*/
 .event-info-swiper {
 		background-color: rgba(255, 255, 255, 0.95) !important;
-		padding: 2rem 0 !important;
+		padding: 2rem 0 3rem !important;
 		position: relative;
 }
 .only_sp .event-info-swiper {

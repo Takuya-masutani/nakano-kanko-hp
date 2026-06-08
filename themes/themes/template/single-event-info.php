@@ -11,7 +11,6 @@
 
 <article id="pageid-post<?php the_ID(); ?>" class="entry-content inner">
 	<h2>イベント情報</h2>
-	<p class="attention">当日の天候や状況に応じてイベント（スケジュール）が変更・中止となっている場合もあります。<br>詳しくはイベントサイトやSNSなどの公式情報をご確認ください。</p>
 
 	<h3 class="event-name">
 		<?php echo wp_kses_post( get_field('event-name') ); ?>
@@ -178,6 +177,9 @@
 					<?php endif; ?>
 				</dl>
 				<?php endif; ?>
+
+				<p class="attention">当日の天候や状況に応じてイベント（スケジュール）が変更・中止となっている場合もあります。<br>詳しくはイベントサイトやSNSなどの公式情報をご確認ください。</p>
+
 			</div>
 		</div>
 

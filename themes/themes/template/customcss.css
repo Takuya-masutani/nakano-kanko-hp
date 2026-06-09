@@ -3385,9 +3385,9 @@ Event Slider FINAL STYLE
 
 @media screen and (max-width: 768px) {
 	.top_index {
-		text-align: left;
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		gap: 0.75em;
 		flex-wrap: wrap;
 	}

@@ -173,6 +173,11 @@ main {
 	.entry-content {
 		padding-top: 0 !important;
 	}
+	img.wp-post-image {
+		width: 100% !important;
+		height: auto !important;
+		max-height: none !important;
+	}
 }
 /* main-visual --------------------------------*/
 .fadeIn_Mv {

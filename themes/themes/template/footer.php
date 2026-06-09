@@ -163,6 +163,17 @@ if (
 
 <?php endif; ?>
 
+<?php if ( is_page('kankoutaishi') ) : ?>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+	var ambA = document.getElementById('amb-a');
+	if (ambA) {
+		ambA.checked = true;
+	}
+});
+</script>
+<?php endif; ?>
+
 <script>
 document.addEventListener('DOMContentLoaded', function () {
 

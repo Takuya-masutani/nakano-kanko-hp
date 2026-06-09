@@ -3385,22 +3385,23 @@ Event Slider FINAL STYLE
 
 @media screen and (max-width: 768px) {
 	.top_index {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 0.75em;
-		flex-wrap: wrap;
+		display: flex !important;
+		align-items: center !important;
+		justify-content: center !important;
+		gap: 0.75em !important;
+		flex-wrap: wrap !important;
+		text-align: center !important;
 	}
 	.top_index img {
 		width: 60px !important;
 		flex-shrink: 0;
 	}
 	.top_index h2 {
-		display: inline;
-		margin: 0;
+		display: inline !important;
+		margin: 0 !important;
 	}
 	.top_index p:empty {
-		display: none;
+		display: none !important;
 	}
 }
 

@@ -2913,32 +2913,29 @@ TOP理事長挨拶ページ
 @media (max-width: 768px){
 
 		.amb-panels{
-				grid-template-columns: none;
-
-				/* 横スクロール専用レイアウト */
-				display: grid;
-				grid-auto-flow: column;
-				grid-auto-columns: 80%;   /* ← カード幅（70〜85%で調整） */
-				gap: 14px;
-
-				overflow-x: auto;
-				padding: 8px 12px 14px;
-				scroll-snap-type: x mandatory;
-				-webkit-overflow-scrolling: touch;
+				grid-template-columns: none !important;
+				display: grid !important;
+				grid-auto-flow: column !important;
+				grid-auto-columns: 80% !important;
+				gap: 14px !important;
+				overflow-x: auto !important;
+				padding: 8px 12px 14px !important;
+				scroll-snap-type: x mandatory !important;
+				-webkit-overflow-scrolling: touch !important;
 		}
 
 		.amb-panel{
-				display: grid;
-				grid-template-rows: auto auto;
-				scroll-snap-align: center;
+				display: grid !important;
+				grid-template-rows: auto auto !important;
+				scroll-snap-align: center !important;
 		}
 
 		.amb-panel img{
-				width: 100%;
-				height: auto;            /* ←固定高さやめる */
-				aspect-ratio: 4 / 3;     /* ←ここで縦横比を決める（例：4:3） */
-				object-fit: cover;
-				display: block;
+				width: 100% !important;
+				height: auto !important;
+				aspect-ratio: 4 / 3 !important;
+				object-fit: cover !important;
+				display: block !important;
 		}
 
 		.amb-name{

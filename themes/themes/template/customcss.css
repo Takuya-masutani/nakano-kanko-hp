@@ -3567,7 +3567,7 @@ Event Slider FINAL STYLE
 		background: rgba(229, 216, 207, 0.3);
 		display: flex;
 		flex-direction: column;
-		margin-bottom: 5rem;
+		margin-bottom: 2rem;
 }
 .information_list.inner li {
 		align-items: center;
@@ -3600,7 +3600,7 @@ Event Slider FINAL STYLE
 				background: rgba(229, 216, 207, 0.3);
 				display: flex;
 				flex-direction: column;
-				margin-bottom: 5rem;
+				margin-bottom: 2rem;
 				font-size: 0.8em;
 		}
 		.information_list.inner li {

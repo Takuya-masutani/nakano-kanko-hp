@@ -3381,6 +3381,7 @@ Event Slider FINAL STYLE
 .top_index{text-align:center;}
 .top_index img{width:94px;}
 .top_index h2{font-family:"Zen Maru Gothic"; font-size:1.4em; color:#641e05; font-weight:bold;font-size:1.6em;}
+.top_index figure.acf-img-wrap { display: contents; }
 
 @media screen and (max-width: 768px) {
 	.top_index {
@@ -3393,14 +3394,6 @@ Event Slider FINAL STYLE
 	.top_index img {
 		width: 60px !important;
 		flex-shrink: 0;
-	}
-	.top_index figure {
-		width: 60px !important;
-		flex-shrink: 0;
-		margin: 0;
-	}
-	.top_index figure img {
-		width: 100% !important;
 	}
 	.top_index h2 {
 		display: inline;

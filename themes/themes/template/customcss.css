@@ -3388,6 +3388,7 @@ Event Slider FINAL STYLE
 		display: flex;
 		align-items: center;
 		gap: 0.75em;
+		flex-wrap: wrap;
 	}
 	.top_index img {
 		width: 60px !important;
@@ -3396,6 +3397,9 @@ Event Slider FINAL STYLE
 	.top_index h2 {
 		display: inline;
 		margin: 0;
+	}
+	.top_index p:empty {
+		display: none;
 	}
 }
 

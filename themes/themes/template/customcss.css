@@ -2841,27 +2841,6 @@ TOP理事長挨拶ページ
 #amb-e:checked ~ .amb-detail-area .amb-e{ display: block; }
 #amb-f:checked ~ .amb-detail-area .amb-f{ display: block; }
 
-/* amb-panels 無限横スクロール */
-.amb-panels {
-		overflow: hidden !important;
-		display: block !important;
-		grid-template-columns: unset !important;
-		padding: 6px 0 12px !important;
-}
-.amb-panels-track {
-		display: flex;
-		gap: 1em;
-		width: max-content;
-		animation: amb-marquee 12s linear infinite;
-}
-.amb-panels-track:hover {
-		animation-play-state: paused;
-}
-@keyframes amb-marquee {
-		from { transform: translateX(0); }
-		to   { transform: translateX(-50%); }
-}
-
 .amb-detail-inner{
 		display: grid;
 		grid-template-columns: 420px 1fr;

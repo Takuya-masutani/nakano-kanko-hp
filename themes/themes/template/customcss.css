@@ -3572,7 +3572,7 @@ Event Slider FINAL STYLE
 }
 @media screen and (max-width: 768px) {
 		.information_list.inner {
-				padding: 1rem;
+				padding: 1rem !important;
 				border: 1px solid #5e4c38;
 				background: rgba(229, 216, 207, 0.3);
 				display: flex;

@@ -724,7 +724,10 @@ ul.post-list.flex {
 		}
 		.archive.post-type-archive-event-info .post-list .post-box figure img,
 		.page-template-page-event-info .post-list .post-box figure img {
-				aspect-ratio: unset !important;
+				aspect-ratio: 4 / 3 !important;
+				object-fit: cover !important;
+				width: 100% !important;
+				height: auto !important;
 		}
 		.page.news .rss-item.flex {
 				flex-direction: column !important;

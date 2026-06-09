@@ -163,6 +163,56 @@ if (
 
 <?php endif; ?>
 
+<?php if ( is_page('kankoutaishi') ) : ?>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+	var ambPanels = document.querySelector('.amb-panels');
+	if (!ambPanels || typeof Swiper === 'undefined') return;
+
+	// 各 label を swiper-slide に移動
+	var labels = Array.from(ambPanels.querySelectorAll('.amb-panel'));
+	var swiperWrapper = document.createElement('div');
+	swiperWrapper.className = 'swiper-wrapper';
+
+	labels.forEach(function (label) {
+		var slide = document.createElement('div');
+		slide.className = 'swiper-slide';
+		slide.appendChild(label);
+		swiperWrapper.appendChild(slide);
+	});
+
+	ambPanels.innerHTML = '';
+	ambPanels.appendChild(swiperWrapper);
+	ambPanels.classList.add('swiper');
+
+	// Swiper 初期化
+	var swiper = new Swiper(ambPanels, {
+		loop: false,
+		grabCursor: true,
+		slidesPerView: 1.5,
+		spaceBetween: 16,
+		centeredSlides: true,
+		breakpoints: {
+			769: {
+				slidesPerView: 4,
+				spaceBetween: 16,
+				centeredSlides: false,
+			}
+		}
+	});
+
+	// ランダムで大使を選択
+	var ambIds = ['amb-a', 'amb-b', 'amb-c', 'amb-d', 'amb-e', 'amb-f'];
+	var randomIdx = Math.floor(Math.random() * ambIds.length);
+	var input = document.getElementById(ambIds[randomIdx]);
+	if (input) {
+		input.checked = true;
+		swiper.slideTo(randomIdx, 0, false);
+	}
+});
+</script>
+<?php endif; ?>
+
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {

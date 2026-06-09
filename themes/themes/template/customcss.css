@@ -2828,21 +2828,39 @@ TOP理事長挨拶ページ
 		background: #fff;
 }
 
-/* まず全部隠す（display:blockを強制しmax-heightでスライド制御） */
+/* まず全部隠す */
 .amb-detail{
-		display: block !important;
-		max-height: 0 !important;
-		overflow: hidden !important;
-		transition: max-height 2s ease !important;
+		display: none;
 }
 
 /* チェックされたタブだけ表示 */
-#amb-a:checked ~ .amb-detail-area .amb-a{ max-height: 3000px !important; }
-#amb-b:checked ~ .amb-detail-area .amb-b{ max-height: 3000px !important; }
-#amb-c:checked ~ .amb-detail-area .amb-c{ max-height: 3000px !important; }
-#amb-d:checked ~ .amb-detail-area .amb-d{ max-height: 3000px !important; }
-#amb-e:checked ~ .amb-detail-area .amb-e{ max-height: 3000px !important; }
-#amb-f:checked ~ .amb-detail-area .amb-f{ max-height: 3000px !important; }
+#amb-a:checked ~ .amb-detail-area .amb-a{ display: block; }
+#amb-b:checked ~ .amb-detail-area .amb-b{ display: block; }
+#amb-c:checked ~ .amb-detail-area .amb-c{ display: block; }
+#amb-d:checked ~ .amb-detail-area .amb-d{ display: block; }
+#amb-e:checked ~ .amb-detail-area .amb-e{ display: block; }
+#amb-f:checked ~ .amb-detail-area .amb-f{ display: block; }
+
+/* amb-panels 無限横スクロール */
+.amb-panels {
+		overflow: hidden !important;
+		display: block !important;
+		grid-template-columns: unset !important;
+		padding: 6px 0 12px !important;
+}
+.amb-panels-track {
+		display: flex;
+		gap: 1em;
+		width: max-content;
+		animation: amb-marquee 12s linear infinite;
+}
+.amb-panels-track:hover {
+		animation-play-state: paused;
+}
+@keyframes amb-marquee {
+		from { transform: translateX(0); }
+		to   { transform: translateX(-50%); }
+}
 
 .amb-detail-inner{
 		display: grid;

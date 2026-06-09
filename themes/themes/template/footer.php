@@ -166,10 +166,26 @@ if (
 <?php if ( is_page('kankoutaishi') ) : ?>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+	// デフォルトで amb-a を選択
 	var ambA = document.getElementById('amb-a');
-	if (ambA) {
-		ambA.checked = true;
-	}
+	if (ambA) ambA.checked = true;
+
+	// .amb-panels を無限横スクロールに変換
+	var panels = document.querySelector('.amb-panels');
+	if (!panels) return;
+
+	// トラック要素を作成
+	var track = document.createElement('div');
+	track.className = 'amb-panels-track';
+
+	// 既存のパネルをトラックに移動
+	var labels = Array.from(panels.querySelectorAll(':scope > .amb-panel'));
+	labels.forEach(function(l) { track.appendChild(l); });
+
+	// シームレスループ用に複製して追加
+	labels.forEach(function(l) { track.appendChild(l.cloneNode(true)); });
+
+	panels.appendChild(track);
 });
 </script>
 <?php endif; ?>

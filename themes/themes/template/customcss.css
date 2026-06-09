@@ -3394,6 +3394,14 @@ Event Slider FINAL STYLE
 		width: 60px !important;
 		flex-shrink: 0;
 	}
+	.top_index figure {
+		width: 60px !important;
+		flex-shrink: 0;
+		margin: 0;
+	}
+	.top_index figure img {
+		width: 100% !important;
+	}
 	.top_index h2 {
 		display: inline;
 		margin: 0;

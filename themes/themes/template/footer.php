@@ -163,7 +163,6 @@ if (
 
 <?php endif; ?>
 
-<?php if ( is_page('kankoutaishi') ) : ?>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
 	var ambPanels = document.querySelector('.amb-panels');
@@ -171,6 +170,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	// 各 label を swiper-slide に移動
 	var labels = Array.from(ambPanels.querySelectorAll('.amb-panel'));
+	if (labels.length === 0) return;
+
 	var swiperWrapper = document.createElement('div');
 	swiperWrapper.className = 'swiper-wrapper';
 
@@ -211,7 +212,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 });
 </script>
-<?php endif; ?>
 
 
 <script>

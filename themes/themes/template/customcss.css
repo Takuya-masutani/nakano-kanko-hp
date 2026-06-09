@@ -172,6 +172,7 @@ main {
 @media screen and (max-width: 768px) {
 	.entry-content {
 		padding-top: 0 !important;
+		margin-top: 2em !important;
 	}
 	img.wp-post-image {
 		width: 100% !important;

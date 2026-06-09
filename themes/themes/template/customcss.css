@@ -2944,35 +2944,6 @@ TOP理事長挨拶ページ
 		}
 }
 
-/* kankoutaishi: Swiper 適用後のレイアウト上書き */
-.amb-panels.swiper {
-		display: block !important;
-		overflow: hidden !important;
-		grid-template-columns: unset !important;
-		grid-auto-flow: unset !important;
-		grid-auto-columns: unset !important;
-		scroll-snap-type: none !important;
-		padding: 6px 2px 12px !important;
-}
-.amb-panels.swiper .swiper-wrapper {
-		display: flex !important;
-}
-.amb-panels.swiper .swiper-slide {
-		height: auto !important;
-		scroll-snap-align: none !important;
-}
-.amb-panels.swiper .amb-panel {
-		display: grid !important;
-		grid-template-rows: 1fr auto !important;
-		height: 100% !important;
-}
-.amb-panels.swiper .amb-panel img {
-		height: 120px !important;
-		width: 100% !important;
-		object-fit: cover !important;
-		aspect-ratio: unset !important;
-}
-
 @media (max-width: 768px){
 
 		.amb-detail-inner{

@@ -163,64 +163,6 @@ if (
 
 <?php endif; ?>
 
-<script>
-(function () {
-	var initialized = false;
-
-	function initAmbSwiper() {
-		if (initialized) return;
-		var ambPanels = document.querySelector('.amb-panels');
-		if (!ambPanels || typeof Swiper === 'undefined') return;
-
-		var labels = Array.from(ambPanels.querySelectorAll('.amb-panel'));
-		if (labels.length === 0) return;
-		initialized = true;
-
-		// 各 label を swiper-slide に移動
-		var swiperWrapper = document.createElement('div');
-		swiperWrapper.className = 'swiper-wrapper';
-		labels.forEach(function (label) {
-			var slide = document.createElement('div');
-			slide.className = 'swiper-slide';
-			slide.appendChild(label);
-			swiperWrapper.appendChild(slide);
-		});
-
-		ambPanels.innerHTML = '';
-		ambPanels.appendChild(swiperWrapper);
-		ambPanels.classList.add('swiper');
-
-		// Swiper 初期化（CSSセレクタで指定）
-		var swiper = new Swiper('.amb-panels.swiper', {
-			loop: false,
-			grabCursor: true,
-			slidesPerView: 1.5,
-			spaceBetween: 16,
-			centeredSlides: true,
-			breakpoints: {
-				769: {
-					slidesPerView: 4,
-					spaceBetween: 16,
-					centeredSlides: false,
-				}
-			}
-		});
-
-		// ランダムで大使を選択
-		var ambIds = ['amb-a', 'amb-b', 'amb-c', 'amb-d', 'amb-e', 'amb-f'];
-		var randomIdx = Math.floor(Math.random() * ambIds.length);
-		var input = document.getElementById(ambIds[randomIdx]);
-		if (input) {
-			input.checked = true;
-			swiper.slideTo(randomIdx, 0, false);
-		}
-	}
-
-	document.addEventListener('DOMContentLoaded', initAmbSwiper);
-	window.addEventListener('load', initAmbSwiper);
-})();
-</script>
-
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {

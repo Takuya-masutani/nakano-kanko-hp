@@ -2828,20 +2828,21 @@ TOP理事長挨拶ページ
 		background: #fff;
 }
 
-/* まず全部隠す */
+/* まず全部隠す（display:blockを強制しmax-heightでスライド制御） */
 .amb-detail{
-		max-height: 0;
-		overflow: hidden;
-		transition: max-height 2s ease;
+		display: block !important;
+		max-height: 0 !important;
+		overflow: hidden !important;
+		transition: max-height 2s ease !important;
 }
 
 /* チェックされたタブだけ表示 */
-#amb-a:checked ~ .amb-detail-area .amb-a{ max-height: 3000px; }
-#amb-b:checked ~ .amb-detail-area .amb-b{ max-height: 3000px; }
-#amb-c:checked ~ .amb-detail-area .amb-c{ max-height: 3000px; }
-#amb-d:checked ~ .amb-detail-area .amb-d{ max-height: 3000px; }
-#amb-e:checked ~ .amb-detail-area .amb-e{ max-height: 3000px; }
-#amb-f:checked ~ .amb-detail-area .amb-f{ max-height: 3000px; }
+#amb-a:checked ~ .amb-detail-area .amb-a{ max-height: 3000px !important; }
+#amb-b:checked ~ .amb-detail-area .amb-b{ max-height: 3000px !important; }
+#amb-c:checked ~ .amb-detail-area .amb-c{ max-height: 3000px !important; }
+#amb-d:checked ~ .amb-detail-area .amb-d{ max-height: 3000px !important; }
+#amb-e:checked ~ .amb-detail-area .amb-e{ max-height: 3000px !important; }
+#amb-f:checked ~ .amb-detail-area .amb-f{ max-height: 3000px !important; }
 
 .amb-detail-inner{
 		display: grid;

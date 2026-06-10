@@ -656,6 +656,12 @@ function kankoutaishi_panels_shortcode() {
 
     $out = '';
 
+    // radio inputs (amb-a 〜 amb-f) ※ CSS .ambassadors .amb-radio で視覚的に非表示
+    $radios = $xpath->query( '//input[starts-with(@id,"amb-")]' );
+    foreach ( $radios as $node ) {
+        $out .= $dom->saveHTML( $node );
+    }
+
     // .amb-panels
     $panels = $xpath->query( '//*[contains(concat(" ",normalize-space(@class)," ")," amb-panels ")]' );
     if ( $panels->length > 0 ) {
@@ -672,7 +678,7 @@ function kankoutaishi_panels_shortcode() {
     $GLOBALS['amb_shortcode_active'] = true;
 
     $link = '<p class="amb-link center"><a href="' . esc_url( get_permalink( $page ) ) . '">観光大使一覧ページへ ›</a></p>';
-    return '<div class="amb-section">' . $out . $link . '</div>';
+    return '<div class="ambassadors amb-section">' . $out . $link . '</div>';
 }
 add_shortcode( 'kankoutaishi_panels', 'kankoutaishi_panels_shortcode' );
 

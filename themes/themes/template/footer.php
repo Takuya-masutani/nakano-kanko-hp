@@ -208,7 +208,7 @@ if (
         var trackW = items.length * 2 * (PANEL_W + GAP);
         track.style.display   = 'flex';
         track.style.width     = trackW + 'px';
-        track.style.animation = 'amb-marquee 12s linear infinite';
+        track.style.animation = 'amb-marquee 14s linear infinite';
         track.style.willChange = 'transform';
 
         panels.appendChild(track);

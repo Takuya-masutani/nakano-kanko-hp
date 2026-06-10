@@ -2788,6 +2788,8 @@ TOP理事長挨拶ページ
 		background: #fff;
 		cursor: pointer;
 		user-select: none;
+		border-radius: 9999px;
+		overflow: hidden;
 }
 
 .amb-panel img{
@@ -3768,6 +3770,11 @@ Event Slider FINAL STYLE
 }
 .Related-sitelinks ul {
   margin: 1.5rem 0;
+}
+
+/* ショートコード内のラジオを非表示 */
+.amb-section input[id^="amb-"] {
+    display: none;
 }
 
 /* ===== kankoutaishi: amb-panels マーキー ===== */

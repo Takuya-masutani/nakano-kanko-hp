@@ -181,7 +181,7 @@ if (
         if (items.length === 0) return false;
 
         var isMobile = window.innerWidth <= 768;
-        var PANEL_W = isMobile ? Math.floor(window.innerWidth * 0.72) : 185;
+        var PANEL_W = isMobile ? 200 : 185;
         var GAP = 14;
 
         // パネル幅をインラインで確定

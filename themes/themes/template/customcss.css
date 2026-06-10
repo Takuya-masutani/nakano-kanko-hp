@@ -3783,7 +3783,8 @@ Event Slider FINAL STYLE
 }
 .amb-marquee-track {
     display: flex;
-    animation: amb-marquee 30s linear infinite;
+    width: max-content;
+    animation: amb-marquee 14s linear infinite;
     will-change: transform;
 }
 .amb-marquee-track:hover {

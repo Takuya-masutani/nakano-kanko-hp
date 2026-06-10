@@ -194,11 +194,14 @@ if (
         var track = document.createElement('div');
         track.className = 'amb-marquee-track';
 
+        // 選択パネルを先頭にして並び替え（スライド開始位置を合わせる）
+        var ordered = items.slice(randomIdx).concat(items.slice(0, randomIdx));
+
         // 元アイテムをトラックへ移動
-        items.forEach(function (item) { track.appendChild(item); });
+        ordered.forEach(function (item) { track.appendChild(item); });
 
         // シームレスループ用クローン（幅・marginもコピーされる）
-        items.forEach(function (item) {
+        ordered.forEach(function (item) {
             var clone = item.cloneNode(true);
             clone.setAttribute('aria-hidden', 'true');
             track.appendChild(clone);
@@ -208,7 +211,7 @@ if (
         var trackW = items.length * 2 * (PANEL_W + GAP);
         track.style.display   = 'flex';
         track.style.width     = trackW + 'px';
-        track.style.animation = 'amb-marquee 14s linear infinite';
+        track.style.animation = 'amb-marquee 18s linear infinite';
         track.style.willChange = 'transform';
 
         panels.appendChild(track);

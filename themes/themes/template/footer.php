@@ -163,6 +163,23 @@ if (
 
 <?php endif; ?>
 
+<?php if ( is_page() && $post->post_name === 'kankoutaishi' ) : ?>
+<script>
+(function () {
+    var ambIds = ['amb-a', 'amb-b', 'amb-c', 'amb-d', 'amb-e', 'amb-f'];
+    var randomIdx = Math.floor(Math.random() * ambIds.length);
+    function tryCheck() {
+        var input = document.getElementById(ambIds[randomIdx]);
+        if (input) { input.checked = true; return true; }
+        return false;
+    }
+    if (!tryCheck()) {
+        window.addEventListener('load', tryCheck);
+    }
+})();
+</script>
+<?php endif; ?>
+
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {

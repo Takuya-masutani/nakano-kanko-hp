@@ -2788,8 +2788,6 @@ TOP理事長挨拶ページ
 		background: #fff;
 		cursor: pointer;
 		user-select: none;
-		border-radius: 9999px;
-		overflow: hidden;
 }
 
 .amb-panel img{
@@ -2799,6 +2797,7 @@ TOP理事長挨拶ページ
 		display: block;
 		border-bottom: 2px solid #FFF;
 		background: #f3f3f3;
+		border-radius: 9999px;
 }
 
 .amb-name{

@@ -627,6 +627,62 @@ function getNewItems($atts) {
 add_shortcode("news", "getNewItems");
 
 /**
+ * 観光大使パネル ショートコード [kankoutaishi_panels]
+ * kankoutaishiページのamb-panels + amb-detail-area をそのまま抽出して埋め込む
+ */
+function kankoutaishi_panels_shortcode() {
+    $page = get_page_by_path( 'kankoutaishi' );
+    if ( ! $page ) return '<!-- kankoutaishi page not found -->';
+
+    // kankoutaishi ページのコンテンツをレンダリング
+    global $post;
+    $orig_post = $post;
+    $post = $page;
+    setup_postdata( $post );
+
+    ob_start();
+    the_content();
+    $html = ob_get_clean();
+
+    $post = $orig_post;
+    wp_reset_postdata();
+
+    // DOMDocument で amb セクションを抽出
+    $dom = new DOMDocument( '1.0', 'UTF-8' );
+    libxml_use_internal_errors( true );
+    $dom->loadHTML( '<html><head><meta charset="UTF-8"></head><body>' . $html . '</body></html>' );
+    libxml_clear_errors();
+    $xpath = new DOMXPath( $dom );
+
+    $out = '';
+
+    // radio inputs (amb-a 〜 amb-f)
+    $radios = $xpath->query( '//input[starts-with(@id,"amb-")]' );
+    foreach ( $radios as $node ) {
+        $out .= $dom->saveHTML( $node );
+    }
+
+    // .amb-panels
+    $panels = $xpath->query( '//*[contains(concat(" ",normalize-space(@class)," ")," amb-panels ")]' );
+    if ( $panels->length > 0 ) {
+        $out .= $dom->saveHTML( $panels->item(0) );
+    }
+
+    // .amb-detail-area
+    $detail = $xpath->query( '//*[contains(concat(" ",normalize-space(@class)," ")," amb-detail-area ")]' );
+    if ( $detail->length > 0 ) {
+        $out .= $dom->saveHTML( $detail->item(0) );
+    }
+
+    // footer.php でマーキー JS を読み込むためのフラグ
+    $GLOBALS['amb_shortcode_active'] = true;
+
+    $link = '<p class="amb-link center"><a href="' . esc_url( get_permalink( $page ) ) . '">観光大使一覧ページへ ›</a></p>';
+    return '<div class="amb-section">' . $out . $link . '</div>';
+}
+add_shortcode( 'kankoutaishi_panels', 'kankoutaishi_panels_shortcode' );
+
+/**
  * 一覧・アーカイブからパスワード保護記事を除外、
  * 個別ページではパスワードフォームを正常表示
  */

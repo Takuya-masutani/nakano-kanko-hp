@@ -163,7 +163,7 @@ if (
 
 <?php endif; ?>
 
-<?php if ( is_page() && $post->post_name === 'kankoutaishi' ) : ?>
+<?php if ( ( is_page() && $post->post_name === 'kankoutaishi' ) || ! empty( $GLOBALS['amb_shortcode_active'] ) ) : ?>
 <script>
 (function () {
     var ambIds = ['amb-a', 'amb-b', 'amb-c', 'amb-d', 'amb-e', 'amb-f'];

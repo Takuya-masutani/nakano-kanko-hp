@@ -2793,14 +2793,13 @@ TOP理事長挨拶ページ
 }
 
 .amb-panel img{
-		width: 100%;
-		aspect-ratio: 1 / 1;
-		height: auto;
-		object-fit: cover;
-		display: block;
-		border-bottom: 2px solid #FFF;
-		background: #f3f3f3;
+		width: 100% !important;
+		aspect-ratio: 1 / 1 !important;
+		height: auto !important;
+		object-fit: cover !important;
+		display: block !important;
 		border-radius: 9999px !important;
+		background: #f3f3f3;
 }
 
 .amb-name{

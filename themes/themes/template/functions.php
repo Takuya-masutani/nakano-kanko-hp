@@ -656,12 +656,6 @@ function kankoutaishi_panels_shortcode() {
 
     $out = '';
 
-    // radio inputs (amb-a 〜 amb-f)
-    $radios = $xpath->query( '//input[starts-with(@id,"amb-")]' );
-    foreach ( $radios as $node ) {
-        $out .= $dom->saveHTML( $node );
-    }
-
     // .amb-panels
     $panels = $xpath->query( '//*[contains(concat(" ",normalize-space(@class)," ")," amb-panels ")]' );
     if ( $panels->length > 0 ) {

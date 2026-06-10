@@ -170,29 +170,49 @@ if (
     var randomIdx = Math.floor(Math.random() * ambIds.length);
 
     function setup() {
-        // ランダムデフォルト選択
         var input = document.getElementById(ambIds[randomIdx]);
         if (!input) return false;
         input.checked = true;
 
-        // マーキー構築
         var panels = document.querySelector('.amb-panels');
-        if (panels && !panels.classList.contains('amb-marquee')) {
-            var items = Array.from(panels.querySelectorAll('.amb-panel'));
-            if (items.length === 0) return false;
-            var track = document.createElement('div');
-            track.className = 'amb-marquee-track';
-            // 元のアイテムをトラックに移動
-            items.forEach(function (item) { track.appendChild(item); });
-            // シームレスループ用にクローンを追加
-            items.forEach(function (item) {
-                var clone = item.cloneNode(true);
-                clone.setAttribute('aria-hidden', 'true');
-                track.appendChild(clone);
-            });
-            panels.appendChild(track);
-            panels.classList.add('amb-marquee');
-        }
+        if (!panels || panels.classList.contains('amb-marquee')) return true;
+
+        var items = Array.from(panels.querySelectorAll('.amb-panel'));
+        if (items.length === 0) return false;
+
+        var isMobile = window.innerWidth <= 768;
+        var PANEL_W = isMobile ? Math.floor(window.innerWidth * 0.72) : 185;
+        var GAP = 14;
+
+        // パネル幅をインラインで確定
+        items.forEach(function (item) {
+            item.style.width      = PANEL_W + 'px';
+            item.style.flexShrink = '0';
+            item.style.marginRight = GAP + 'px';
+        });
+
+        var track = document.createElement('div');
+        track.className = 'amb-marquee-track';
+
+        // 元アイテムをトラックへ移動
+        items.forEach(function (item) { track.appendChild(item); });
+
+        // シームレスループ用クローン（幅・marginもコピーされる）
+        items.forEach(function (item) {
+            var clone = item.cloneNode(true);
+            clone.setAttribute('aria-hidden', 'true');
+            track.appendChild(clone);
+        });
+
+        // トラック幅・アニメーションをインラインで確定
+        var trackW = items.length * 2 * (PANEL_W + GAP);
+        track.style.display   = 'flex';
+        track.style.width     = trackW + 'px';
+        track.style.animation = 'amb-marquee 12s linear infinite';
+        track.style.willChange = 'transform';
+
+        panels.appendChild(track);
+        panels.classList.add('amb-marquee');
         return true;
     }
 

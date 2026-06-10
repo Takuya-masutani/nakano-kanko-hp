@@ -3769,3 +3769,40 @@ Event Slider FINAL STYLE
 .Related-sitelinks ul {
   margin: 1.5rem 0;
 }
+
+/* ===== kankoutaishi: amb-panels マーキー ===== */
+.amb-panels.amb-marquee {
+    display: block !important;
+    overflow: hidden !important;
+    grid-template-columns: unset !important;
+    grid-auto-flow: unset !important;
+    grid-auto-columns: unset !important;
+    scroll-snap-type: none !important;
+    -webkit-overflow-scrolling: unset !important;
+    padding: 8px 0 14px !important;
+}
+.amb-marquee-track {
+    display: flex;
+    animation: amb-marquee 30s linear infinite;
+    will-change: transform;
+}
+.amb-marquee-track:hover {
+    animation-play-state: paused;
+}
+@keyframes amb-marquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+.amb-panels.amb-marquee .amb-panel {
+    width: 185px;
+    flex-shrink: 0;
+    margin-right: 14px;
+    display: grid;
+    scroll-snap-align: unset !important;
+}
+@media (max-width: 768px) {
+    .amb-panels.amb-marquee .amb-panel {
+        width: 72vw !important;
+        margin-right: 14px !important;
+    }
+}

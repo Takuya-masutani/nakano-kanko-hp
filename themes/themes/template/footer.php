@@ -168,14 +168,37 @@ if (
 (function () {
     var ambIds = ['amb-a', 'amb-b', 'amb-c', 'amb-d', 'amb-e', 'amb-f'];
     var randomIdx = Math.floor(Math.random() * ambIds.length);
-    function tryCheck() {
+
+    function setup() {
+        // ランダムデフォルト選択
         var input = document.getElementById(ambIds[randomIdx]);
-        if (input) { input.checked = true; return true; }
-        return false;
+        if (!input) return false;
+        input.checked = true;
+
+        // マーキー構築
+        var panels = document.querySelector('.amb-panels');
+        if (panels && !panels.classList.contains('amb-marquee')) {
+            var items = Array.from(panels.querySelectorAll('.amb-panel'));
+            if (items.length === 0) return false;
+            var track = document.createElement('div');
+            track.className = 'amb-marquee-track';
+            // 元のアイテムをトラックに移動
+            items.forEach(function (item) { track.appendChild(item); });
+            // シームレスループ用にクローンを追加
+            items.forEach(function (item) {
+                var clone = item.cloneNode(true);
+                clone.setAttribute('aria-hidden', 'true');
+                track.appendChild(clone);
+            });
+            panels.appendChild(track);
+            panels.classList.add('amb-marquee');
+        }
+        return true;
     }
-    if (!tryCheck()) {
-        window.addEventListener('load', tryCheck);
-    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        if (!setup()) window.addEventListener('load', setup);
+    });
 })();
 </script>
 <?php endif; ?>
